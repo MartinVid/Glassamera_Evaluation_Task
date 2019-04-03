@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= title
+  p You have selected a glass with Height: #{variables.height}mm, Width: #{variables.width}mm, Thickness: #{variables.thickness}mm
+  p #{variables.mounting ? 'Mounting included (+100 EUR)' : 'Mounting not included'}
+  p Total price is #{price} EUR

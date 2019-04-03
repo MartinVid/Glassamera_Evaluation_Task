@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Glass Dimensions
+
+        // input variables form
+        form(method='POST' action='/index')
+          div.form-group
+            label(for='height') Height:
+            input#height.form-control(type='text', placeholder='1000mm' name='height')
+          div.form-group
+            label(for='width') Width:
+            input#width.form-control(type='text', placeholder='1000mm' name='width')
+          div.form-group
+            label Thickness:
+            input.radio-inline#thickness(type='radio', name='thickness', value='6' checked="checked")
+            label(for='thickness') 6mm 
+            input.radio-inline#thickness(type='radio', name='thickness', value='8')
+            label(for='thickness') 8mm
+          div.form-group
+            label(for='mounting') Mounting:
+            input.checkbox#mounting(type='checkbox', name='mounting', value='true')
+          div.form-group
+          button.btn.btn-primary(type='submit') Enter
